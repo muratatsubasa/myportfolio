@@ -1,0 +1,16 @@
+body {
+    background-image: url(img/bg.jpg);
+    width: 1020px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+textarea {
+    margin: 20px 0;
+}

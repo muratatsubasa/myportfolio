@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Converter</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container py-5">
+
+    <h1>date converter</h1>
+    <p>カレンダーから日付を選択し、追加を押す</p>
+    <!-- <div> -->
+      <input type="date" id="UserInput">
+    <!-- </div> -->
+    <input type="button" value="追加" onclick="clickBtn1()">
+    <input type="button" value="クリア" onclick="clickBtn2()">
+    <div>
+      <textarea cols="40" rows="3" id="InputedList"></textarea>
+    </div>
+    <div>
+      <input type="button" value="コピー" onclick="clickBtn3()">
+    </div>
+
+    <script>
+        function clickBtn1() {
+            //カレンダーから選択した日付をテキストボックスに添付
+            var UserString = document.getElementById('UserInput').value;
+            document.getElementById('InputedList').value += UserString + ",";
+        }
+        function clickBtn2() {
+            //テキストボックス内の値を消去
+            document.getElementById('InputedList').value = "";
+        }
+        function clickBtn3() {
+            //テキストボックス内の値をコピー
+            var text = document.getElementsByTagName("textarea")[0];
+            text.select();
+            document.execCommand("copy");
+        }
+    </script>
+  </div>
+</body>
+
+</html>
